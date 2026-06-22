@@ -8,13 +8,9 @@ if [[ $USER_INFO -ne 0 ]]; then
     exit 1
 fi
 
-
-
-
 # Install nginx
 echo "Installing nginx..."
 sudo apt install -y nginx
-
 
 if [[ $? -ne 0 ]]; then
     echo "Installing nginx.. : FAILED"
@@ -27,7 +23,6 @@ fi
 echo "Installing nginx..."
 sudo apt install -y mysql-server
 
-
 if [[ $? -ne 0 ]]; then
     echo "Installing nginx.. : FAILED"
     exit 1
@@ -38,15 +33,12 @@ fi
 echo "Installing nginx..."
 sudo apt install -y nodejs npm
 
-
 if [[ $? -ne 0 ]]; then
     echo "Installing nginx.. : FAILED"
     exit 1
 else
     echo "Installing nginx.. : SUCCESS"
 fi
-
-
 
 #=========================
 # uninstall packages
