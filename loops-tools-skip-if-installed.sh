@@ -31,4 +31,5 @@ do
         echo "Installing $package..." &>> $LOG_FILE
         sudo apt install -y $package &>> $LOG_FILE
         VALIDATE $? "Installation of $package"
+    fi
 done
