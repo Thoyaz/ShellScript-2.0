@@ -6,3 +6,4 @@ echo "Hello ${USER_NAME}, Welcome to Shell Scripting"
 
 echo "Please enter your password: "
 read -s USER_PASSWD
+echo "Your passwor is ${USER_PASSWD}"
