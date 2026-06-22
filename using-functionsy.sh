@@ -19,7 +19,7 @@ VALIDATE(){
 
 # Install nginx
 echo "Installing nginx..."
-sudo apt install -y nginxxs
+sudo apt install -y nginx
 
 VALIDATE $? "Nginx installation"
 
