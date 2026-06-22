@@ -24,7 +24,7 @@ VALIDATE(){
 for package in "$@"
 do
 
-    if command -v $package &>> $LOG_FILE
+    if dpkg -s $package &>> $LOG_FILE
     then
         echo "$package is already installed. Skipping installation." | tee -a $LOG_FILE
     else
