@@ -18,6 +18,8 @@ echo "Home directory of the person executing the script is : $HOME"
 
 echo "PID of the script is : $$"
 
+sleep 10 &
+
 echo "background process id is : $!"
 
 echo "exit status of the last command executed is : $?"
