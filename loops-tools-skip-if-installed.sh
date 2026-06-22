@@ -24,7 +24,7 @@ VALIDATE(){
 for package in "$@"
 do
 
-    if command -v $package &> /dev/null
+    if command -v $package &>> $LOG_FILE
     then
         exit 0
     fi
