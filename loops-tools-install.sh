@@ -3,11 +3,6 @@
 USER_INFO=$(id -u)
 LOG_FOLDER="/var/log/shell-logs"
 LOG_FILE="/var/log/shell-logs/$0.log"
-LIST_OF_PACKAGES=(
-    "nginx"
-    "mysql-server"
-    "nodejs npm"
-)
 
 #verify user
 if [[ $USER_INFO -ne 0 ]]; then
@@ -26,9 +21,9 @@ VALIDATE(){
     fi 
 }
 
-for i in "${LIST_OF_PACKAGES[@]}"
+for package in "$@"
 do
-    echo "Installing $i..."
-    sudo apt install -y $i &>> $LOG_FILE
-    VALIDATE $? "Installation of $i"
+    echo "Installing $package..."
+    sudo apt install -y $package &>> $LOG_FILE
+    VALIDATE $? "Installation of $package"
 done
