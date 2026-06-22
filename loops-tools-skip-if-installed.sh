@@ -27,10 +27,8 @@ do
     if command -v $package &>> $LOG_FILE
     then
         echo "$package is already installed. Skipping installation." | tee -a $LOG_FILE
-        exit 0
-    fi
-
-    echo "Installing $package..."
-    sudo apt install -y $package &>> $LOG_FILE
-    VALIDATE $? "Installation of $package"
+    else
+        echo "Installing $package..." &>> $LOG_FILE
+        sudo apt install -y $package &>> $LOG_FILE
+        VALIDATE $? "Installation of $package"
 done
