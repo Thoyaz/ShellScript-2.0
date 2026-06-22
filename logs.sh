@@ -23,19 +23,13 @@ VALIDATE(){
 }
 
 # Install nginx
-echo "Installing nginx..."
 sudo apt install -y nginx &>> $LOG_FILE 
-
 VALIDATE $? "Nginx installation"
 
 #install mysql
-echo "Installing nginx..."
 sudo apt install -y mysql-server &>> $LOG_FILE 
-
 VALIDATE $? "Mysql installation"
 
 #install nodejs
-echo "Installing nginx..."
 sudo apt install -y nodejs npm &>> $LOG_FILE 
-
 VALIDATE $? "nodejs installation"
