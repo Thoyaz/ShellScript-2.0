@@ -7,3 +7,13 @@ sleep 10
 
 END_TIME=$(date)
 echo "The end time of the script is: ${END_TIME}"
+
+# ================
+
+START_TIME=$(date +%s)
+echo "The start time of the script is: ${START_TIME}"
+
+sleep 10
+
+END_TIME=$(date +%s)
+echo "The end time of the script is: ${END_TIME}"
