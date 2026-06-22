@@ -26,6 +26,7 @@ do
 
     if command -v $package &>> $LOG_FILE
     then
+        echo "$package is already installed. Skipping installation." | tee -a $LOG_FILE
         exit 0
     fi
 
