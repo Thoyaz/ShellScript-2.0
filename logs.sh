@@ -7,7 +7,7 @@ LOG_FILE="/var/log/shell-logs/$0.log"
 
 #verify user
 if [[ $USER_INFO -ne 0 ]]; then
-    echo "Please run the script as root user"
+    echo "Please run the script as root user" | tee -a $LOG_FILE
     exit 1
 fi
 
@@ -15,10 +15,10 @@ mkdir -p /var/log/shell-logs # creates folder if not exists
 
 VALIDATE(){
     if [[ $1 -ne 0 ]]; then
-        echo "$2 : FAILED"
+        echo "$2 : FAILED" | tee -a $LOG_FILE
         exit 1
     else
-        echo "$2 : SUCCESS"
+        echo "$2 : SUCCESS" | tee -a $LOG_FILE
     fi 
 }
 
