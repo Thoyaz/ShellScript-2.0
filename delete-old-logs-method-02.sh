@@ -18,9 +18,9 @@ FILES_TO_DELETE=$(find $LOGS_DIR -name '*.log' -type f -mtime +14)
 if [ -z $FILES_TO_DELETE ]; then
     echo "Logs files olderthan 14 days was not exist"
     else
-        while IFS=read -r filepath; do
+        while IFS= read -r filepath; do
             echo "Deleting file...$filepath"
-            rm -rf $filepath
+            rm -f $filepath
             echo "Deleted file...$filepath"
         done <<< $FILES_TO_DELETE
 fi
