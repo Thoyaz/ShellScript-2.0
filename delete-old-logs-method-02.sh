@@ -1,9 +1,9 @@
 #!/bin/bash
 
-R="\e[31M"
-G="\e[32M"
-Y="\e[33M"
-N="\e[0M"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 LOGS_DIR=/home/tz/delete_logs
 SCRIPT_LOGS="$LOGS_DIR/$(basename "$0").log"
