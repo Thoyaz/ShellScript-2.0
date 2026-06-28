@@ -22,5 +22,5 @@ else
         echo "Deleting file...$filepath"
         rm -rf $filepath
         echo "Deleted file...$filepath"
-    done <<< FILES_TO_DELETE
+    done <<< $FILES_TO_DELETE
 fi
